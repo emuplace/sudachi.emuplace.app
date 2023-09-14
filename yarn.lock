@@ -766,27 +766,27 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@mantine/core@7.0.0-beta.2":
-  version "7.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-7.0.0-beta.2.tgz#692841ff8b4cac75d6bd50feaadf27ccfe2d7b15"
-  integrity sha512-Na8MvXnbbjt5Pd1F3c+HKgH1l3vYx+xCBL/OQlQoRwsougKwpOZIf1cnV0Xm0dMELN0KPqDXxJj8w68LMTJWYw==
+"@mantine/core@7.0.0-beta.5":
+  version "7.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-7.0.0-beta.5.tgz#43fa811a5d1149f7390c8b182e070b99b82cf979"
+  integrity sha512-tMVc7QusNRPofn4oOEhO3BZjqpUdXK0CvR2K1u5OIwSWX4hvOMxg5xfEUFygvlQwNtV4IQ40xy4+PdX/Q9DyAw==
   dependencies:
     "@floating-ui/react" "^0.24.8"
     clsx "2.0.0"
     react-number-format "^5.2.2"
     react-remove-scroll "^2.5.6"
     react-textarea-autosize "8.5.2"
-    type-fest "^4.0.0"
+    type-fest "^3.13.1"
 
-"@mantine/hooks@7.0.0-beta.2":
-  version "7.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-7.0.0-beta.2.tgz#aba6a5932a9a651c054d98443fe4470a3f7026ba"
-  integrity sha512-UWgiIW1tD/iieowZrBl/4GbVFPtyRJqv/R1wgv0ElSZa1DJxkOVAJPxRGD8S85T6NkMdYQOTSbmWOyIgdAaVOg==
+"@mantine/hooks@7.0.0-beta.5":
+  version "7.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-7.0.0-beta.5.tgz#df4b5926098df3810ff5bd110afaab61bc137ca8"
+  integrity sha512-nULpVscntqG3YaCCmKyq7BcXZcp9BIUeBwbT+lszPiwktmfxSx08DTWNd50hgkaO3FfI9qKW/bDzm0Nrlp/U1A==
 
-"@mantine/vanilla-extract@7.0.0-alpha.13":
-  version "7.0.0-alpha.13"
-  resolved "https://registry.yarnpkg.com/@mantine/vanilla-extract/-/vanilla-extract-7.0.0-alpha.13.tgz#15d4fa992ed720ee62ff5e3517d2e81d35e43536"
-  integrity sha512-2R30DUwPnStFC+pQdYz2dK+6DroLTAYgiHyjZ4ngM8nfd9ffPMJdis+FfY9snsnrY1FwACJWRoOLNqaWsfPDSQ==
+"@mantine/vanilla-extract@7.0.0-beta.5":
+  version "7.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@mantine/vanilla-extract/-/vanilla-extract-7.0.0-beta.5.tgz#6e963fd883cd408c9bdc5f5347bf9076a75027e6"
+  integrity sha512-Jx4v3n+ykmCiSeKOEaNBVdwCAs6n0onVCL1M3RgXhBWiQMdYl69n1CblY88oxyGvRwZw9OCiwIF7yPA/XJFQGQ==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -2249,10 +2249,10 @@ type-fest@^0.20.2:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.20.2.tgz#1bf207f4b28f91583666cb5fbd327887301cd5f4"
   integrity sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==
 
-type-fest@^4.0.0:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-4.3.1.tgz#5cb58cdab5120f7ab0b40cfdc35073fb9adb651d"
-  integrity sha512-pphNW/msgOUSkJbH58x8sqpq8uQj6b0ZKGxEsLKMUnGorRcDjrUaLS+39+/ub41JNTwrrMyJcUB8+YZs3mbwqw==
+type-fest@^3.13.1:
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-3.13.1.tgz#bb744c1f0678bea7543a2d1ec24e83e68e8c8706"
+  integrity sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==
 
 typescript@^5.1.3:
   version "5.1.3"
