@@ -766,10 +766,10 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@mantine/core@7.0.0-beta.5":
-  version "7.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-7.0.0-beta.5.tgz#43fa811a5d1149f7390c8b182e070b99b82cf979"
-  integrity sha512-tMVc7QusNRPofn4oOEhO3BZjqpUdXK0CvR2K1u5OIwSWX4hvOMxg5xfEUFygvlQwNtV4IQ40xy4+PdX/Q9DyAw==
+"@mantine/core@7.0.0-beta.7":
+  version "7.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-7.0.0-beta.7.tgz#4c759f836163a3a39c515ceb206a467a26d16277"
+  integrity sha512-uJidJ7q50rvh/AC7PxWo5vvNA/nHoIIP08S1OKQfLmQU7ki7muykzmOzYI4muB89ZEKZtRPAUGifI7YF+dVlDw==
   dependencies:
     "@floating-ui/react" "^0.24.8"
     clsx "2.0.0"
@@ -778,15 +778,15 @@
     react-textarea-autosize "8.5.2"
     type-fest "^3.13.1"
 
-"@mantine/hooks@7.0.0-beta.5":
-  version "7.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-7.0.0-beta.5.tgz#df4b5926098df3810ff5bd110afaab61bc137ca8"
-  integrity sha512-nULpVscntqG3YaCCmKyq7BcXZcp9BIUeBwbT+lszPiwktmfxSx08DTWNd50hgkaO3FfI9qKW/bDzm0Nrlp/U1A==
+"@mantine/hooks@7.0.0-beta.7":
+  version "7.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-7.0.0-beta.7.tgz#02b44d400760de48fb60c0b55a7fecb8e46fd3f5"
+  integrity sha512-TleKhNpZprZO3xbhzz8LrmnOP56MSoUwhIZfrP/Y9hohGgtrcZ+DxWk8ROwNo6O7pWqHfNhfNDtfm6ul/Sa1eg==
 
-"@mantine/vanilla-extract@7.0.0-beta.5":
-  version "7.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@mantine/vanilla-extract/-/vanilla-extract-7.0.0-beta.5.tgz#6e963fd883cd408c9bdc5f5347bf9076a75027e6"
-  integrity sha512-Jx4v3n+ykmCiSeKOEaNBVdwCAs6n0onVCL1M3RgXhBWiQMdYl69n1CblY88oxyGvRwZw9OCiwIF7yPA/XJFQGQ==
+"@mantine/vanilla-extract@7.0.0-beta.7":
+  version "7.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@mantine/vanilla-extract/-/vanilla-extract-7.0.0-beta.7.tgz#c09bbb8fd1444da60bc6b93309d51683159f33bc"
+  integrity sha512-BgoxZz/KCyDP7X64xY/VuOAreHxiMwmpYuliUyQ/Ayo+gOJNK9pAsQmmfIasH1ZOIezHDZ5GpNp9NPlids/pvw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
