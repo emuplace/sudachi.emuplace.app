@@ -766,10 +766,10 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@mantine/core@7.0.0-beta.7":
-  version "7.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-7.0.0-beta.7.tgz#4c759f836163a3a39c515ceb206a467a26d16277"
-  integrity sha512-uJidJ7q50rvh/AC7PxWo5vvNA/nHoIIP08S1OKQfLmQU7ki7muykzmOzYI4muB89ZEKZtRPAUGifI7YF+dVlDw==
+"@mantine/core@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-7.0.0.tgz#28a912ad4526b9a1554fe9821d8c4be3392088e0"
+  integrity sha512-0F+AdATM6uzZyKD3YNR95EY4taYVpdnKIaEmjSNRqYnfHCK/4TcbG+srDDBXrXclyJpGg9I1TF1D5M1ePoBoNA==
   dependencies:
     "@floating-ui/react" "^0.24.8"
     clsx "2.0.0"
@@ -778,15 +778,15 @@
     react-textarea-autosize "8.5.2"
     type-fest "^3.13.1"
 
-"@mantine/hooks@7.0.0-beta.7":
-  version "7.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-7.0.0-beta.7.tgz#02b44d400760de48fb60c0b55a7fecb8e46fd3f5"
-  integrity sha512-TleKhNpZprZO3xbhzz8LrmnOP56MSoUwhIZfrP/Y9hohGgtrcZ+DxWk8ROwNo6O7pWqHfNhfNDtfm6ul/Sa1eg==
+"@mantine/hooks@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-7.0.0.tgz#6c0060b7b903d2d93275a0b53b29775c54201faf"
+  integrity sha512-HdZ6qE15OKNA3esbO72+mRqztMcdGphL/wl/ks8N7iAlSUu7sFtgZN+IU6MfJxGc/MEN3x5dEceWG6FgwOmHOw==
 
-"@mantine/vanilla-extract@7.0.0-beta.7":
-  version "7.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/@mantine/vanilla-extract/-/vanilla-extract-7.0.0-beta.7.tgz#c09bbb8fd1444da60bc6b93309d51683159f33bc"
-  integrity sha512-BgoxZz/KCyDP7X64xY/VuOAreHxiMwmpYuliUyQ/Ayo+gOJNK9pAsQmmfIasH1ZOIezHDZ5GpNp9NPlids/pvw==
+"@mantine/vanilla-extract@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@mantine/vanilla-extract/-/vanilla-extract-7.0.0.tgz#89a16337d67b36d2d341d1dce4ce0f7b8ed12177"
+  integrity sha512-4RGwM0IflJ7Vd89bXiNkp8CnZrGXS9PhbbznJkUaX15s4hRCowTXP4Igtmv4hKC9DUkxYXAhtYmYBTwINdkQgw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
