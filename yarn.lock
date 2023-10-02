@@ -766,27 +766,27 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@mantine/core@7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-7.1.0.tgz#06c1beaff53c06e4413ad87352edfd75e913440d"
-  integrity sha512-DNexnix5Lz7na8bfXCNVDsCsorxMzF1we3mtU33B0mLyiLkH47BhpgKNxvf5OjEK5SUJ0Bi7r5m91Tm7pmAB7w==
+"@mantine/core@7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-7.1.1.tgz#2b5e03e2720fbf6a34a46168ff8f0289b5783593"
+  integrity sha512-7PBbu/zlL3Uw4HtBVf48fpTy/IFVSJzhMkh3sxG9HQxZot6c5cjuBuTCT+FFY5xicuoYQTu6nkHjZiaz7j12Ug==
   dependencies:
     "@floating-ui/react" "^0.24.8"
     clsx "2.0.0"
     react-number-format "^5.2.2"
     react-remove-scroll "^2.5.6"
-    react-textarea-autosize "8.5.2"
+    react-textarea-autosize "8.5.3"
     type-fest "^3.13.1"
 
-"@mantine/hooks@7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-7.1.0.tgz#44e43df2eff9785296b8507048fe425bd01091ec"
-  integrity sha512-XW8qYNoS81bIWmdI7yZV8BmBkTtr0//3fyBJ2dcKRSKWY5HVNPkLDXPQk9/E4bpQIRmufDGQ6pLmUfY+0VjO3g==
+"@mantine/hooks@7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-7.1.1.tgz#52d64c8eea9bc77a80503c2d0e06893304d006e1"
+  integrity sha512-k+9NX/YW+pUioH0s2qPmHfGAoSXuNobu1tfT+2eiLMkiQkj3PcErD4K/KJ0MCkR4mGh9PmVcFZbxoYSxgLqRZw==
 
-"@mantine/vanilla-extract@7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@mantine/vanilla-extract/-/vanilla-extract-7.1.0.tgz#8d9197da62517c4caac9f899f42e809880437e2b"
-  integrity sha512-43Tc3lpe4c7tj//1swxi/KRxoAnBpiKmENcUVBnAt62JnUlGDwU+j+TA6OSG8iwYr97GP9OUcTzuAyfuj6QvFA==
+"@mantine/vanilla-extract@7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@mantine/vanilla-extract/-/vanilla-extract-7.1.1.tgz#321a91b323c41eca2db0106feac35c4bceca7593"
+  integrity sha512-Rjy4bnvqFJeZ5fXr39RhdQfbPlIQTxJEbclXb43JoCaIOcJC7l/kbJW+uaRcavDXm+Ko1Su45ELsMsRCRfRb/w==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -2051,10 +2051,10 @@ react-style-singleton@^2.2.1:
     invariant "^2.2.4"
     tslib "^2.0.0"
 
-react-textarea-autosize@8.5.2:
-  version "8.5.2"
-  resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-8.5.2.tgz#6421df2b5b50b9ca8c5e96fd31be688ea7fa2f9d"
-  integrity sha512-uOkyjkEl0ByEK21eCJMHDGBAAd/BoFQBawYK5XItjAmCTeSbjxghd8qnt7nzsLYzidjnoObu6M26xts0YGKsGg==
+react-textarea-autosize@8.5.3:
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-8.5.3.tgz#d1e9fe760178413891484847d3378706052dd409"
+  integrity sha512-XT1024o2pqCuZSuBt9FwHlaDeNtVrtCXu0Rnz88t1jUGheCLa3PhjE1GH8Ctm2axEtvdCl5SUHYschyQ0L5QHQ==
   dependencies:
     "@babel/runtime" "^7.20.13"
     use-composed-ref "^1.3.0"
