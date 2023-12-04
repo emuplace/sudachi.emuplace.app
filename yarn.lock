@@ -802,39 +802,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/core@npm:7.2.1":
-  version: 7.2.1
-  resolution: "@mantine/core@npm:7.2.1"
+"@mantine/core@npm:7.3.0":
+  version: 7.3.0
+  resolution: "@mantine/core@npm:7.3.0"
   dependencies:
     "@floating-ui/react": "npm:^0.24.8"
     clsx: "npm:2.0.0"
-    react-number-format: "npm:^5.2.2"
-    react-remove-scroll: "npm:^2.5.6"
+    react-number-format: "npm:^5.3.1"
+    react-remove-scroll: "npm:^2.5.7"
     react-textarea-autosize: "npm:8.5.3"
     type-fest: "npm:^3.13.1"
   peerDependencies:
-    "@mantine/hooks": 7.2.1
+    "@mantine/hooks": 7.3.0
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: ec0d9d641a673b7a8c5250d9038f04d3f90efae66e344ea9e12e122bc5d76c216f8fc61d5c01a7b18a40b9e70b23181334bf6af3fdf55b1aa3fede76bd0ee0ce
+  checksum: b3722513c72df181510fccf8e8a96aa9456d99a80ae3995e6a0db1f55be31e49f2d97ff729147e80f08305aa3fc49ad0a32fa7e29eb5065ce42eb092551daf86
   languageName: node
   linkType: hard
 
-"@mantine/hooks@npm:7.2.1":
-  version: 7.2.1
-  resolution: "@mantine/hooks@npm:7.2.1"
+"@mantine/hooks@npm:7.3.0":
+  version: 7.3.0
+  resolution: "@mantine/hooks@npm:7.3.0"
   peerDependencies:
     react: ^18.2.0
-  checksum: 1939447455df444d8d77c71d01a848ce5db1c5b7868c44f4ae88e0336f1cc07cb13cc036faa932bbca4b819d69e9ef693b7ad572dc109f3b5b60de28cea4171d
+  checksum: 3de186ab186a566eaeda26601db4cc0052280bf7ae23d517ba8ba7e8f2386533de8c9bf230692a2a8caea4d83c457225f25de94271fe1d1d7601ce9206fca631
   languageName: node
   linkType: hard
 
-"@mantine/vanilla-extract@npm:7.2.1":
-  version: 7.2.1
-  resolution: "@mantine/vanilla-extract@npm:7.2.1"
+"@mantine/vanilla-extract@npm:7.3.0":
+  version: 7.3.0
+  resolution: "@mantine/vanilla-extract@npm:7.3.0"
   peerDependencies:
-    "@mantine/core": 7.2.1
-  checksum: 72764e841a0364a3d80446905ed2a534ff866cc215bafc2d3c0263c0497015b6b721b640d69fe960cffa12eda23ea1a00ca239e861bc5b7e65cc0252f6f61e43
+    "@mantine/core": 7.3.0
+  checksum: 32e58980030378574a027430cbe8e4dbbbf61c137958b5c0cb189a1321ff69e187b308d0b6829ba9b62dc5942449151efa87b5ab4aed38d0694c1bcd2b6c37ee
   languageName: node
   linkType: hard
 
@@ -3089,15 +3089,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-number-format@npm:^5.2.2":
-  version: 5.3.0
-  resolution: "react-number-format@npm:5.3.0"
+"react-number-format@npm:^5.3.1":
+  version: 5.3.1
+  resolution: "react-number-format@npm:5.3.1"
   dependencies:
     prop-types: "npm:^15.7.2"
   peerDependencies:
     react: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
     react-dom: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: 673926191a612ccc9064cd3cbf789f2567cd0cbb8ea5043f5dfee2db4b86136077694b2901775e07b5d8203e201701d17c1f776622ba467dc1b946f7efc788cb
+  checksum: 9e37698ab3d8224fd6cf5a69845c0308720d04de8459757031de0304379cfd2c0c897834cc9f62869933c4702a97888ba51abeb6490b7282e237a4c19a5fab04
   languageName: node
   linkType: hard
 
@@ -3124,9 +3124,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-remove-scroll@npm:^2.5.6":
-  version: 2.5.6
-  resolution: "react-remove-scroll@npm:2.5.6"
+"react-remove-scroll@npm:^2.5.7":
+  version: 2.5.7
+  resolution: "react-remove-scroll@npm:2.5.7"
   dependencies:
     react-remove-scroll-bar: "npm:^2.3.4"
     react-style-singleton: "npm:^2.2.1"
@@ -3139,7 +3139,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: c9831df3b67349c0e4aa8bbd2233dcb44f671b25fe84c790e1c42667fe63c8d5b9e7a1f2541a4bc081957c7a2fa4e4d295d24c5f5aed0718f9b1b73b246a7136
+  checksum: dcd523ada602bd0a839c2032cadf0b3e4af55ee85acefee3760976a9cceaa4606927801b093bbb8bf3c2989c71e048f5428c2c6eb9e6681762e86356833d039b
   languageName: node
   linkType: hard
 
@@ -3687,9 +3687,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vite-min-template@workspace:."
   dependencies:
-    "@mantine/core": "npm:7.2.1"
-    "@mantine/hooks": "npm:7.2.1"
-    "@mantine/vanilla-extract": "npm:7.2.1"
+    "@mantine/core": "npm:7.3.0"
+    "@mantine/hooks": "npm:7.3.0"
+    "@mantine/vanilla-extract": "npm:7.3.0"
     "@types/react": "npm:^18.2.35"
     "@types/react-dom": "npm:^18.2.14"
     "@typescript-eslint/eslint-plugin": "npm:^6.9.1"
