@@ -3519,15 +3519,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-preset-mantine@npm:1.12.0":
-  version: 1.12.0
-  resolution: "postcss-preset-mantine@npm:1.12.0"
+"postcss-preset-mantine@npm:1.12.3":
+  version: 1.12.3
+  resolution: "postcss-preset-mantine@npm:1.12.3"
   dependencies:
     postcss-mixins: "npm:^9.0.4"
     postcss-nested: "npm:^6.0.1"
   peerDependencies:
     postcss: ">=8.0.0"
-  checksum: 4a4c8635027ea4a770826ceeb9e099aab24f59d2e83e634ca709e0726dca330a85398de019a334c8c1dd7b9088535500738a8b8600d749f80727594e48a91014
+  checksum: 45dba9a9a04d96a3730ca3593c72a6eda0d35fd3e519c72ef8723add4e91dc28d4550c77461a3d0ba84c2ef4601e112e93cb24268c38ecd853ff427e3377ebb9
   languageName: node
   linkType: hard
 
@@ -4312,7 +4312,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-react-refresh: "npm:^0.4.4"
     postcss: "npm:^8.4.32"
-    postcss-preset-mantine: "npm:1.12.0"
+    postcss-preset-mantine: "npm:1.12.3"
     postcss-simple-vars: "npm:^7.0.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
