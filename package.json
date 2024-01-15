@@ -10,9 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mantine/core": "7.4.0",
-    "@mantine/hooks": "7.4.0",
-    "@mantine/vanilla-extract": "7.4.0",
+    "@mantine/core": "7.4.1",
+    "@mantine/hooks": "7.4.1",
+    "@mantine/vanilla-extract": "7.4.1",
     "@vanilla-extract/css": "^1.14.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
