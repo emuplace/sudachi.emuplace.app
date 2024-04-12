@@ -28,7 +28,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "postcss": "^8.4.35",
-    "postcss-preset-mantine": "1.13.0",
+    "postcss-preset-mantine": "1.14.4",
     "postcss-simple-vars": "^7.0.1",
     "typescript": "^5.4.2",
     "vite": "^5.1.6"
