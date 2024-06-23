@@ -13,25 +13,25 @@
     "@mantine/core": "7.10.2",
     "@mantine/hooks": "7.10.2",
     "@mantine/vanilla-extract": "7.10.2",
-    "@vanilla-extract/css": "^1.14.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@vanilla-extract/css": "^1.15.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/react": "^18.2.65",
-    "@types/react-dom": "^18.2.21",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
-    "@vanilla-extract/vite-plugin": "^4.0.6",
-    "@vitejs/plugin-react": "^4.2.1",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
+    "@vanilla-extract/vite-plugin": "^4.0.11",
+    "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^8.57.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "postcss": "^8.4.35",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "postcss": "^8.4.38",
     "postcss-preset-mantine": "1.15.0",
     "postcss-simple-vars": "^7.0.1",
-    "typescript": "^5.4.2",
-    "vite": "^5.1.6"
+    "typescript": "^5.5.2",
+    "vite": "^5.3.1"
   },
   "packageManager": "yarn@4.2.2"
 }
