@@ -1325,9 +1325,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/core@npm:7.10.2":
-  version: 7.10.2
-  resolution: "@mantine/core@npm:7.10.2"
+"@mantine/core@npm:7.11.0":
+  version: 7.11.0
+  resolution: "@mantine/core@npm:7.11.0"
   dependencies:
     "@floating-ui/react": "npm:^0.26.9"
     clsx: "npm:^2.1.1"
@@ -1336,28 +1336,28 @@ __metadata:
     react-textarea-autosize: "npm:8.5.3"
     type-fest: "npm:^4.12.0"
   peerDependencies:
-    "@mantine/hooks": 7.10.2
+    "@mantine/hooks": 7.11.0
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: 10c0/6cbddd40e12c0432925c6c68cad0182d4fb1dfdf6616cf6e1614b8b1f8fab7a96b49e3c4bf91dc0241fe0ff0c478a4a6c6ee32bc9da2ef81e8a49f18045a71d4
+  checksum: 10c0/41fb80ed5e9cfe67bca3dd9a764c00e66f8c78b92f2f71f4f4fd73b1621d682053b07532590a609bce7e876d8d4f67d69fcacc37168a294595b8af7c2ffce616
   languageName: node
   linkType: hard
 
-"@mantine/hooks@npm:7.10.2":
-  version: 7.10.2
-  resolution: "@mantine/hooks@npm:7.10.2"
+"@mantine/hooks@npm:7.11.0":
+  version: 7.11.0
+  resolution: "@mantine/hooks@npm:7.11.0"
   peerDependencies:
     react: ^18.2.0
-  checksum: 10c0/ebe2f1d21b5ca960194526aab76c72b684875655db651953afef211f07379b25dc7ca9fd36a7aaffe7a50536ef042c99c434c0b0de9c62d74845ab1228923cd1
+  checksum: 10c0/5fb96b46145f0f1fbbe2a4934ce26e374e59dfc4b0d7b1f0b96e4d9a93997315bb57e5d2747331648e33280669404555a52b0e9857bb8b81b1121fe02eede5ac
   languageName: node
   linkType: hard
 
-"@mantine/vanilla-extract@npm:7.10.2":
-  version: 7.10.2
-  resolution: "@mantine/vanilla-extract@npm:7.10.2"
+"@mantine/vanilla-extract@npm:7.11.0":
+  version: 7.11.0
+  resolution: "@mantine/vanilla-extract@npm:7.11.0"
   peerDependencies:
-    "@mantine/core": 7.10.2
-  checksum: 10c0/15ad6f8b2b4831f151b4a8eedeceaef7d39b6b9d8eeba8f95369758eb7cd320e4fc314a78c733a33686dc7cc6d906ed8cdd60261c6f9bba613987b0da811eed5
+    "@mantine/core": 7.11.0
+  checksum: 10c0/0f295eae493f86c73b5dc405fa47350b44d52e52d64ac8ed1788fb9bc9b522d502e672ac648ce856ba2b8a698f7e04397ab4b850cf0bfadb14a123c3fdaad37d
   languageName: node
   linkType: hard
 
@@ -4631,9 +4631,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vite-min-template@workspace:."
   dependencies:
-    "@mantine/core": "npm:7.10.2"
-    "@mantine/hooks": "npm:7.10.2"
-    "@mantine/vanilla-extract": "npm:7.10.2"
+    "@mantine/core": "npm:7.11.0"
+    "@mantine/hooks": "npm:7.11.0"
+    "@mantine/vanilla-extract": "npm:7.11.0"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
     "@typescript-eslint/eslint-plugin": "npm:^7.13.1"
