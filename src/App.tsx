@@ -1,14 +1,117 @@
 import "@mantine/core/styles.css";
-import { MantineProvider } from "@mantine/core";
+import {
+    Accordion, Anchor, Button, Container,
+    Flex, Group, List, MantineProvider, Menu,
+    Space, Stack, Text, Title, rem
+} from "@mantine/core";
+import {
+    IconDeviceMobile,
+    IconDeviceTablet,
+    IconDeviceLaptop,
+    IconCardboards
+} from '@tabler/icons-react';
+import { useState } from "react";
 import { theme } from "./theme";
-import { Welcome } from "./Welcome/Welcome";
-import { ColorSchemeToggle } from "./ColorSchemeToggle/ColorSchemeToggle";
 
 export default function App() {
-  return (
-    <MantineProvider theme={theme}>
-      <Welcome />
-      <ColorSchemeToggle />
-    </MantineProvider>
-  );
+    const changes = [
+        {
+            text: 'Windows',
+            details: [
+                {
+                    secondaryText: 'Fixed an issue in Paper Mario: The Thousand Year Door that caused the sewers to be black when using an AMD graphics card',
+                    tertiaryText: 'Thank you to Ryujinx for the pointer towards LogicOp'
+                }
+            ]
+        }
+    ];
+
+    const items = changes.map((item) => {
+        const listItems = item.details.map((detail) => (
+            <List.Item>
+                <Text>
+                    {detail.secondaryText}
+                </Text>
+                <Text c={'dimmed'} size="sm" hidden={detail.tertiaryText == ''}>
+                    {detail.tertiaryText}
+                </Text>
+            </List.Item>
+        ));
+
+        return (
+            <Accordion.Item key={item.text} value={item.text}>
+                <Accordion.Control>{item.text}</Accordion.Control>
+                <Accordion.Panel>
+                    <List>
+                        {listItems}
+                    </List>
+                </Accordion.Panel>
+            </Accordion.Item>
+        );
+    });
+
+    const [opened, setOpened] = useState(false);
+
+    return (
+        <MantineProvider theme={theme} forceColorScheme="dark">
+            <Container>
+                <Flex align={'center'} justify={'center'} h={'100vh'}>
+                    <Stack>
+                        <Anchor href='https://twitter.com/antique_codes' ta={'center'} target='_blank'>
+                            @antique_codes
+                        </Anchor>
+                        <Title order={1} ta={'center'}>
+                            Sudachi, a Nintendo Switch emulator
+                        </Title>
+                        <Text c={'dimmed'} ta={'center'}>
+                            Sudachi will still receive updates but not as frequent, the plan is to add an Artic Base type feature similar to Pablo's Citra fork, move over to LibHac (for Windows) and update the UI entirely
+                        </Text>
+                        <Flex align={'center'} justify={'center'}>
+                            <Group ta={'center'}>
+                                <Button color="green" component="a" href="/releases/sudachi-android-v1.0.4.7z" radius={'xl'} variant="filled">Android</Button>
+                                <Menu opened={opened} onChange={setOpened}>
+                                    <Menu.Target>
+                                        <Button radius={'xl'} variant="filled">Apple</Button>
+                                    </Menu.Target>
+
+                                    <Menu.Dropdown>
+                                        <Menu.Label>iOS, iPadOS</Menu.Label>
+                                        <Menu.Item leftSection={<IconDeviceTablet style={{ width: rem(14), height: rem(14) }} />} disabled>
+                                            iPad
+                                        </Menu.Item>
+                                        <Menu.Item leftSection={<IconDeviceMobile style={{ width: rem(14), height: rem(14) }} />} disabled>
+                                            iPhone
+                                        </Menu.Item>
+                                        <Menu.Divider />
+                                        <Menu.Label>macOS</Menu.Label>
+                                        <Menu.Item leftSection={<IconDeviceLaptop style={{ width: rem(14), height: rem(14) }} />} disabled>
+                                            Apple Silicon
+                                        </Menu.Item>
+                                        <Menu.Item leftSection={<IconDeviceLaptop style={{ width: rem(14), height: rem(14) }} />} disabled>
+                                            Intel
+                                        </Menu.Item>
+                                        <Menu.Divider />
+                                        <Menu.Label>visionOS</Menu.Label>
+                                        <Menu.Item leftSection={<IconCardboards style={{ width: rem(14), height: rem(14) }} />} disabled>
+                                            Apple Vision Pro
+                                        </Menu.Item>
+                                    </Menu.Dropdown>
+                                </Menu>
+                                <Button color="orange" radius={'xl'} variant="filled" disabled>Linux</Button>
+                                <Button color="blue" component="a" href="/releases/sudachi-windows-v1.0.4.7z" radius={'xl'} variant="filled">Windows</Button>
+                                <Button color="gray" component="a" href="/releases/latest.zip" radius={'xl'} variant="filled">Source Code</Button>
+                            </Group>
+                        </Flex>
+                        <Space h={'md'} />
+                        <Title order={2}>
+                            Changes
+                        </Title>
+                        <Accordion radius={'md'} variant="contained">
+                            {items}
+                        </Accordion>
+                    </Stack>
+                </Flex>
+            </Container>
+        </MantineProvider>
+    );
 }
