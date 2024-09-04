@@ -19,6 +19,13 @@ export default function App() {
             text: 'Windows',
             details: [
                 {
+                    secondaryText: 'Fixed an issue in Animal Well that caused the game to not boot due to the audio core revision number being too low'
+                },
+                {
+                    secondaryText: 'Fixed an issue in Princess Peach: Showtime! that caused the game to run into a black screen',
+                    tertiaryText: 'Please be aware this fix is not complete and Princess Peach: Showtime! will still drop to 0fps occasionally'
+                },
+                {
                     secondaryText: 'Fixed an issue in Paper Mario: The Thousand Year Door that caused the sewers to be black when using an AMD graphics card',
                     tertiaryText: 'Thank you to Ryujinx for the pointer towards LogicOp'
                 }
@@ -32,7 +39,7 @@ export default function App() {
                 <Text>
                     {detail.secondaryText}
                 </Text>
-                <Text c={'dimmed'} size="sm" hidden={detail.tertiaryText == ''}>
+                <Text c={'dimmed'} size="sm" hidden={detail.tertiaryText == '' || detail.tertiaryText == null}>
                     {detail.tertiaryText}
                 </Text>
             </List.Item>
@@ -53,7 +60,7 @@ export default function App() {
     const [opened, setOpened] = useState(false);
 
     return (
-        <MantineProvider theme={theme} forceColorScheme="dark">
+        <MantineProvider theme={theme}>
             <Container>
                 <Flex align={'center'} justify={'center'} h={'100vh'}>
                     <Stack>
@@ -64,22 +71,22 @@ export default function App() {
                             Sudachi, a Nintendo Switch emulator
                         </Title>
                         <Text c={'dimmed'} ta={'center'}>
-                            Sudachi will still receive updates but not as frequent, the plan is to add an Artic Base type feature similar to Pablo's Citra fork, move over to LibHac (for Windows) and update the UI entirely
+                            Nintendo Switch emulation without the iffy bits and support for more games
                         </Text>
                         <Flex align={'center'} justify={'center'}>
                             <Group ta={'center'}>
-                                <Button color="green" component="a" href="/releases/sudachi-android-v1.0.4.7z" radius={'xl'} variant="filled">Android</Button>
+                                <Button color="green" radius={'xl'} variant="filled" disabled>Android</Button>
                                 <Menu opened={opened} onChange={setOpened}>
                                     <Menu.Target>
-                                        <Button radius={'xl'} variant="filled">Apple</Button>
+                                        <Button radius={'xl'} variant="filled" disabled>Apple</Button>
                                     </Menu.Target>
 
                                     <Menu.Dropdown>
                                         <Menu.Label>iOS, iPadOS</Menu.Label>
-                                        <Menu.Item leftSection={<IconDeviceTablet style={{ width: rem(14), height: rem(14) }} />} disabled>
+                                        <Menu.Item leftSection={<IconDeviceTablet style={{ width: rem(14), height: rem(14) }} />}>
                                             iPad
                                         </Menu.Item>
-                                        <Menu.Item leftSection={<IconDeviceMobile style={{ width: rem(14), height: rem(14) }} />} disabled>
+                                        <Menu.Item leftSection={<IconDeviceMobile style={{ width: rem(14), height: rem(14) }} />}>
                                             iPhone
                                         </Menu.Item>
                                         <Menu.Divider />
@@ -98,7 +105,7 @@ export default function App() {
                                     </Menu.Dropdown>
                                 </Menu>
                                 <Button color="orange" radius={'xl'} variant="filled" disabled>Linux</Button>
-                                <Button color="blue" component="a" href="/releases/sudachi-windows-v1.0.4.7z" radius={'xl'} variant="filled">Windows</Button>
+                                <Button color="blue" component="a" href="/releases/sudachi-windows-v1.0.5.7z" radius={'xl'} variant="filled">Windows</Button>
                                 <Button color="gray" component="a" href="/releases/latest.zip" radius={'xl'} variant="filled">Source Code</Button>
                             </Group>
                         </Flex>
