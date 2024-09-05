@@ -1,6 +1,6 @@
 import "@mantine/core/styles.css";
 import {
-    Accordion, Anchor, Button, Container,
+    Accordion, Anchor, Badge, Button, Container,
     Flex, Group, List, MantineProvider, Menu,
     Space, Stack, Text, Title, rem
 } from "@mantine/core";
@@ -18,6 +18,9 @@ export default function App() {
         {
             text: 'Windows',
             details: [
+                {
+                    secondaryText: 'Fixed an issue in Super Bomberman R 2 that caused the game to not boot due to an error in the Friend service'
+                },
                 {
                     secondaryText: 'Fixed an issue in Animal Well that caused the game to not boot due to the audio core revision number being too low'
                 },
@@ -105,17 +108,25 @@ export default function App() {
                                     </Menu.Dropdown>
                                 </Menu>
                                 <Button color="orange" radius={'xl'} variant="filled" disabled>Linux</Button>
-                                <Button color="blue" component="a" href="/releases/sudachi-windows-v1.0.5.7z" radius={'xl'} variant="filled">Windows</Button>
+                                <Button color="blue" component="a" href="/releases/sudachi-windows-v1.0.6.7z" radius={'xl'} variant="filled">Windows</Button>
                                 <Button color="gray" component="a" href="/releases/latest.zip" radius={'xl'} variant="filled">Source Code</Button>
                             </Group>
                         </Flex>
                         <Space h={'md'} />
-                        <Title order={2}>
-                            Changes
-                        </Title>
+                        <Group gap={'md'} justify="space-between">
+                            <Title order={2}>
+                                Changes
+                            </Title>
+                            <Badge>
+                                v1.0.6
+                            </Badge>
+                        </Group>
                         <Accordion radius={'md'} variant="contained">
                             {items}
                         </Accordion>
+                        <Text c={'red'}>
+                            Please backup and delete all folders within the Sudachi directory, this will fix the downloadable content and updates issue
+                        </Text>
                     </Stack>
                 </Flex>
             </Container>
