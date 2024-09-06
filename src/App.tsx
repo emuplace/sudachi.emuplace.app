@@ -108,7 +108,7 @@ export default function App() {
                                     </Menu.Dropdown>
                                 </Menu>
                                 <Button color="orange" radius={'xl'} variant="filled" disabled>Linux</Button>
-                                <Button color="blue" component="a" href="/releases/sudachi-windows-v1.0.6.7z" radius={'xl'} variant="filled">Windows</Button>
+                                <Button color="blue" component="a" href="/releases/sudachi-windows-v1.0.7.7z" radius={'xl'} variant="filled">Windows</Button>
                                 <Button color="gray" component="a" href="/releases/latest.zip" radius={'xl'} variant="filled">Source Code</Button>
                             </Group>
                         </Flex>
@@ -118,7 +118,7 @@ export default function App() {
                                 Changes
                             </Title>
                             <Badge>
-                                v1.0.6
+                                v1.0.7
                             </Badge>
                         </Group>
                         <Accordion radius={'md'} variant="contained">
