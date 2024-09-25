@@ -62,8 +62,10 @@ export default function App() {
 
     const [opened, setOpened] = useState(false);
 
+    const date = new Date();
+
     return (
-        <MantineProvider theme={theme}>
+        <MantineProvider theme={theme} forceColorScheme={date.getHours() >= 7 && date.getHours() <= 19 ? "light" : "dark"}>
             <Container>
                 <Flex align={'center'} justify={'center'} h={'100vh'}>
                     <Stack>
