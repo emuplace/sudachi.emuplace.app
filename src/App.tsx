@@ -12,49 +12,112 @@ import {
 } from '@tabler/icons-react';
 import { useState } from "react";
 import { theme } from "./theme";
+import classes from './App.module.css';
 
 export default function App() {
     const changes = [
         {
-            text: 'Windows',
+            text: 'v1.0.8',
+            sha: '450b52f',
+            isLatest: true,
+            isUpcoming: false,
             details: [
                 {
-                    secondaryText: 'Fixed an issue in Super Bomberman R 2 that caused the game to not boot due to an error in the Friend service'
+                    system: "Android",
+                    items: [
+                        {
+                            primaryText: 'Improved memory accuracy and sizing',
+                            secondaryText: null
+                        }
+                    ]
                 },
                 {
-                    secondaryText: 'Fixed an issue in Animal Well that caused the game to not boot due to the audio core revision number being too low'
-                },
+                    system: "Windows",
+                    items: [
+                        {
+                            primaryText: 'Improved memory accuracy and sizing',
+                            secondaryText: null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            text: 'v1.0.7',
+            sha: 'xxxxxxx',
+            isLatest: false,
+            isUpcoming: false,
+            details: [
                 {
-                    secondaryText: 'Fixed an issue in Princess Peach: Showtime! that caused the game to run into a black screen',
-                    tertiaryText: 'Please be aware this fix is not complete and Princess Peach: Showtime! will still drop to 0fps occasionally'
-                },
-                {
-                    secondaryText: 'Fixed an issue in Paper Mario: The Thousand Year Door that caused the sewers to be black when using an AMD graphics card',
-                    tertiaryText: 'Thank you to Ryujinx for the pointer towards LogicOp'
+                    system: 'Windows',
+                    items: [
+                        {
+                            primaryText: 'Fixed an issue in Super Bomberman R 2 that caused the game to not boot due to an error in the Friend service',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Fixed an issue in Animal Well that caused the game to not boot due to the audio core revision number being too low',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Fixed an issue in Princess Peach: Showtime! that caused the game to run into a black screen',
+                            secondaryText: 'Please be aware this fix is not complete and Princess Peach: Showtime! will still drop to 0fps occasionally'
+                        },
+                        {
+                            primaryText: 'Fixed an issue in Paper Mario: The Thousand Year Door that caused the sewers to be black when using an AMD graphics card',
+                            secondaryText: 'Thank you to Ryujinx for the pointer towards LogicOp'
+                        }
+                    ]
                 }
             ]
         }
     ];
 
     const items = changes.map((item) => {
-        const listItems = item.details.map((detail) => (
-            <List.Item>
-                <Text>
-                    {detail.secondaryText}
-                </Text>
-                <Text c={'dimmed'} size="sm" hidden={detail.tertiaryText == '' || detail.tertiaryText == null}>
-                    {detail.tertiaryText}
-                </Text>
-            </List.Item>
-        ));
+        const listItems = item.details.map((detail, index) => {
+            const detailItems = detail.items.map((item) => (
+                <>
+                    <List.Item>
+                        <Text>{item.primaryText}</Text>
+                        <Text c={'dimmed'} size="sm" hidden={item.secondaryText == '' || item.secondaryText == null}>
+                            {item.secondaryText}
+                        </Text>
+                    </List.Item>
+                </>
+            ));
+
+            return (
+                <>
+                    <Title order={3}>
+                        {detail.system}
+                    </Title>
+                    <List>
+                        {detailItems}
+                    </List>
+                    <Space h={index === changes.length ? 0 : 'md'} />
+                </>
+            );
+        });
 
         return (
             <Accordion.Item key={item.text} value={item.text}>
-                <Accordion.Control>{item.text}</Accordion.Control>
+                <Accordion.Control>
+                    <Group justify='space-between' pr={'md'}>
+                        <Group gap={'sm'}>
+                            <Text>
+                                {item.text}
+                            </Text>
+                            <Text c={'dimmed'}>
+                                {`(${item.sha})`}
+                            </Text>
+                        </Group>
+                        <Badge color={item.isLatest ? 'green' : item.isUpcoming ? 'violet' : 'red'}>
+                            {item.isLatest ? 'Latest' : item.isUpcoming ? 'Upcoming' : 'Outdated'}
+                        </Badge>
+                    </Group>
+                </Accordion.Control>
                 <Accordion.Panel>
-                    <List>
-                        {listItems}
-                    </List>
+                    {...listItems}
                 </Accordion.Panel>
             </Accordion.Item>
         );
@@ -80,7 +143,7 @@ export default function App() {
                         </Text>
                         <Flex align={'center'} justify={'center'}>
                             <Group ta={'center'}>
-                                <Button color="green" radius={'xl'} variant="filled" disabled>Android</Button>
+                                <Button component="a" href="releases/app-mainline-release.apk" color="green" radius={'xl'} variant="filled">Android</Button>
                                 <Menu opened={opened} onChange={setOpened}>
                                     <Menu.Target>
                                         <Button radius={'xl'} variant="filled" disabled>Apple</Button>
@@ -110,20 +173,15 @@ export default function App() {
                                     </Menu.Dropdown>
                                 </Menu>
                                 <Button color="orange" radius={'xl'} variant="filled" disabled>Linux</Button>
-                                <Button color="blue" component="a" href="/releases/sudachi-windows-v1.0.7.7z" radius={'xl'} variant="filled">Windows</Button>
-                                <Button color="gray" component="a" href="/releases/latest.zip" radius={'xl'} variant="filled">Source Code</Button>
+                                <Button color="blue" component="a" href="releases/sudachi-windows-v1.0.8.7z" radius={'xl'} variant="filled">Windows</Button>
+                                <Button color="gray" component="a" href="releases/latest.zip" radius={'xl'} variant="filled">Source Code</Button>
                             </Group>
                         </Flex>
                         <Space h={'md'} />
-                        <Group gap={'md'} justify="space-between">
-                            <Title order={2}>
-                                Changes
-                            </Title>
-                            <Badge>
-                                v1.0.7
-                            </Badge>
-                        </Group>
-                        <Accordion radius={'md'} variant="contained">
+                        <Title order={2}>
+                            Changes
+                        </Title>
+                        <Accordion classNames={classes} radius={'md'} variant="contained">
                             {items}
                         </Accordion>
                         <Text c={'red'}>
