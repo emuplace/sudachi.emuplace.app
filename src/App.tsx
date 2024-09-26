@@ -143,7 +143,7 @@ export default function App() {
                         </Text>
                         <Flex align={'center'} justify={'center'}>
                             <Group ta={'center'}>
-                                <Button component="a" href="releases/app-mainline-release.apk" color="green" radius={'xl'} variant="filled">Android</Button>
+                                <Button component="a" href="https://drive.google.com/file/d/1L_gb5v22wgxhNAOWasEAIwZm2WRvXKxE/view?usp=sharing" color="green" radius={'xl'} variant="filled">Android</Button>
                                 <Menu opened={opened} onChange={setOpened}>
                                     <Menu.Target>
                                         <Button radius={'xl'} variant="filled" disabled>Apple</Button>
@@ -173,8 +173,8 @@ export default function App() {
                                     </Menu.Dropdown>
                                 </Menu>
                                 <Button color="orange" radius={'xl'} variant="filled" disabled>Linux</Button>
-                                <Button color="blue" component="a" href="releases/sudachi-windows-v1.0.8.7z" radius={'xl'} variant="filled">Windows</Button>
-                                <Button color="gray" component="a" href="releases/latest.zip" radius={'xl'} variant="filled">Source Code</Button>
+                                <Button color="blue" component="a" href="https://drive.google.com/file/d/1bMWQtBkQwU7_oPjL0NGllOOMVyS_YV4j/view?usp=sharing" radius={'xl'} variant="filled">Windows</Button>
+                                <Button color="gray" component="a" href="https://drive.google.com/file/d/149zdnytWES7-2f8SpXuceVBz--xKgp2c/view?usp=sharing" radius={'xl'} variant="filled">Source Code</Button>
                             </Group>
                         </Flex>
                         <Space h={'md'} />
