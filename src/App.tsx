@@ -177,7 +177,6 @@ export default function App() {
                                 <Button color="gray" component="a" href="https://drive.google.com/file/d/149zdnytWES7-2f8SpXuceVBz--xKgp2c/view?usp=sharing" radius={'xl'} variant="filled">Source Code</Button>
                             </Group>
                         </Flex>
-                        <Space h={'md'} />
                         <Title order={2}>
                             Changes
                         </Title>
