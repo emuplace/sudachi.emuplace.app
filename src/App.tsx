@@ -1,29 +1,47 @@
 import "@mantine/core/styles.css";
 import {
     Accordion, Anchor, Badge, Button, Container,
-    Flex, Group, List, MantineProvider, Menu,
-    Space, Stack, Text, Title, rem
+    Flex, Group, List, MantineProvider,
+    Space, Stack, Text, Title
 } from "@mantine/core";
-import {
-    IconDeviceMobile,
-    IconDeviceTablet,
-    IconDeviceLaptop,
-    IconCardboards
-} from '@tabler/icons-react';
-import { useState } from "react";
 import { theme } from "./theme";
 import classes from './App.module.css';
 
 export default function App() {
     const changes = [
         {
-            text: 'v1.0.8',
-            sha: '450b52f',
+            text: 'v1.0.9',
+            sha: 'e56a8a0',
             isLatest: true,
             isUpcoming: false,
             details: [
                 {
                     system: "Android",
+                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.9/app-mainline-release.apk',
+                    last: true,
+                    items: [
+                        {
+                            primaryText: 'Added an additional page to the setup flow and button to the settings page allowing users to select a title.keys file',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Fixed an issue where the app would crash when installing a DLC or update',
+                            secondaryText: 'Requires both prod.keys and title.keys'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            text: 'v1.0.8',
+            sha: '450b52f',
+            isLatest: false,
+            isUpcoming: false,
+            details: [
+                {
+                    system: "Android",
+                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.8/app-mainline-release.apk',
+                    last: false,
                     items: [
                         {
                             primaryText: 'Improved memory accuracy and sizing',
@@ -33,6 +51,8 @@ export default function App() {
                 },
                 {
                     system: "Windows",
+                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.8/sudachi-windows-v1.0.8.7z',
+                    last: true,
                     items: [
                         {
                             primaryText: 'Improved memory accuracy and sizing',
@@ -50,6 +70,8 @@ export default function App() {
             details: [
                 {
                     system: 'Windows',
+                    download: '',
+                    last: true,
                     items: [
                         {
                             primaryText: 'Fixed an issue in Super Bomberman R 2 that caused the game to not boot due to an error in the Friend service',
@@ -74,7 +96,7 @@ export default function App() {
     ];
 
     const items = changes.map((item) => {
-        const listItems = item.details.map((detail, index) => {
+        const listItems = item.details.map((detail) => {
             const detailItems = detail.items.map((item) => (
                 <>
                     <List.Item>
@@ -94,7 +116,11 @@ export default function App() {
                     <List>
                         {detailItems}
                     </List>
-                    <Space h={index === changes.length ? 0 : 'md'} />
+                    <Space h={'md'} />
+                    <Button component="a" disabled={detail.download == '' || detail.download == null} href={detail.download} radius={'md'} size="sm">
+                        Download
+                    </Button>
+                    <Space h={detail.last ? 0 : 'md'} />
                 </>
             );
         });
@@ -123,8 +149,6 @@ export default function App() {
         );
     });
 
-    const [opened, setOpened] = useState(false);
-
     const date = new Date();
 
     return (
@@ -141,9 +165,9 @@ export default function App() {
                         <Text c={'dimmed'} ta={'center'}>
                             Nintendo Switch emulation without the iffy bits and support for more games
                         </Text>
-                        <Flex align={'center'} justify={'center'}>
+                        {/*<Flex align={'center'} justify={'center'}>
                             <Group ta={'center'}>
-                                <Button component="a" href="https://drive.google.com/file/d/1L_gb5v22wgxhNAOWasEAIwZm2WRvXKxE/view?usp=sharing" color="green" radius={'xl'} variant="filled">Android</Button>
+                                <Button component="a" href="https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.9/app-mainline-release.apk" color="green" radius={'xl'} variant="filled">Android</Button>
                                 <Menu opened={opened} onChange={setOpened}>
                                     <Menu.Target>
                                         <Button radius={'xl'} variant="filled" disabled>Apple</Button>
@@ -173,14 +197,14 @@ export default function App() {
                                     </Menu.Dropdown>
                                 </Menu>
                                 <Button color="orange" radius={'xl'} variant="filled" disabled>Linux</Button>
-                                <Button color="blue" component="a" href="https://drive.google.com/file/d/1bMWQtBkQwU7_oPjL0NGllOOMVyS_YV4j/view?usp=sharing" radius={'xl'} variant="filled">Windows</Button>
+                                <Button color="blue" component="a" href="https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.8/sudachi-windows-v1.0.8.7z" radius={'xl'} variant="filled">Windows</Button>
                                 <Button color="gray" component="a" href="https://drive.google.com/file/d/149zdnytWES7-2f8SpXuceVBz--xKgp2c/view?usp=sharing" radius={'xl'} variant="filled">Source Code</Button>
                             </Group>
-                        </Flex>
+                        </Flex>*/}
                         <Title order={2}>
                             Changes
                         </Title>
-                        <Accordion classNames={classes} radius={'md'} variant="contained">
+                        <Accordion classNames={classes} defaultValue={changes[0].text} radius={'lg'} variant="contained">
                             {items}
                         </Accordion>
                         <Text c={'red'}>

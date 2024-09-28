@@ -1,5 +1,5 @@
 .root {
-    border-radius: var(--mantine-radius-md);
+    border-radius: var(--mantine-radius-lg);
     background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
 }
 
@@ -16,7 +16,7 @@
         background-color: var(--mantine-color-body);
         border-color: light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4));
         box-shadow: var(--mantine-shadow-md);
-        border-radius: var(--mantine-radius-md);
+        border-radius: var(--mantine-radius-lg);
     }
 }
 
