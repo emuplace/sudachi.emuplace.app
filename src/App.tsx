@@ -212,7 +212,7 @@ export default function App() {
                         <Title order={2}>
                             Changes
                         </Title>
-                        <Accordion classNames={classes} defaultValue={changes[0].text} radius={'lg'} variant="contained">
+                        <Accordion classNames={classes} radius={'lg'} variant="contained">
                             {items}
                         </Accordion>
                         <Text c={'red'}>
