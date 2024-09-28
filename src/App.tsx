@@ -30,7 +30,8 @@ export default function App() {
                         }
                     ]
                 }
-            ]
+            ],
+            url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.9/latest.zip'
         },
         {
             text: 'v1.0.8',
@@ -60,7 +61,8 @@ export default function App() {
                         }
                     ]
                 }
-            ]
+            ],
+            url: ''
         },
         {
             text: 'v1.0.7',
@@ -91,7 +93,8 @@ export default function App() {
                         }
                     ]
                 }
-            ]
+            ],
+            url: ''
         }
     ];
 
@@ -117,9 +120,14 @@ export default function App() {
                         {detailItems}
                     </List>
                     <Space h={'md'} />
-                    <Button component="a" disabled={detail.download == '' || detail.download == null} href={detail.download} radius={'md'} size="sm">
-                        Download
-                    </Button>
+                    <Group>
+                        <Button component="a" disabled={detail.download == '' || detail.download == null} href={detail.download} radius={'md'} size="sm">
+                            Download
+                        </Button>
+                        <Button color="gray" component="a" disabled={item.url == '' || item.url == null} href={item.url} radius={'md'} size="sm">
+                            Source Code
+                        </Button>
+                    </Group>
                     <Space h={detail.last ? 0 : 'md'} />
                 </>
             );
