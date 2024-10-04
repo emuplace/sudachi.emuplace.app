@@ -10,6 +10,68 @@ import classes from './App.module.css';
 export default function App() {
     const changes = [
         {
+            text: 'v1.0.10',
+            sha: 'f2e32a9',
+            isLatest: false,
+            isUpcoming: true,
+            details: [
+                {
+                    system: "Android",
+                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.10/app-mainline-release.apk',
+                    last: false,
+                    items: [
+                        {
+                            primaryText: 'Added some support for QLaunch (Home Menu) and added QLaunch option to Applet launcher submenu',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Improved accuracy of several IPC interface services',
+                            secondaryText: null
+                        }
+                    ]
+                },
+                {
+                    system: "Linux",
+                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.10/sudachi-linux-v1.0.10.7z',
+                    last: false,
+                    items: [
+                        {
+                            primaryText: 'Added some support for QLaunch (Home Menu) and added QLaunch option to Tools submenu',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Improved accuracy of several IPC interface services',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Improved game library loading by using native C++ directory recursion',
+                            secondaryText: null
+                        }
+                    ]
+                },
+                {
+                    system: "Windows",
+                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.10/sudachi-windows-v1.0.10.7z',
+                    last: true,
+                    items: [
+                        {
+                            primaryText: 'Added some support for QLaunch (Home Menu) and added QLaunch option to Tools submenu',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Improved accuracy of several IPC interface services',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Improved game library loading by using native C++ directory recursion',
+                            secondaryText: null
+                        }
+                    ]
+                }
+            ],
+            url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.10/latest.zip'
+        },
+        {
             text: 'v1.0.9',
             sha: 'e56a8a0',
             isLatest: true,
@@ -58,38 +120,6 @@ export default function App() {
                         {
                             primaryText: 'Improved memory accuracy and sizing',
                             secondaryText: null
-                        }
-                    ]
-                }
-            ],
-            url: ''
-        },
-        {
-            text: 'v1.0.7',
-            sha: 'xxxxxxx',
-            isLatest: false,
-            isUpcoming: false,
-            details: [
-                {
-                    system: 'Windows',
-                    download: '',
-                    last: true,
-                    items: [
-                        {
-                            primaryText: 'Fixed an issue in Super Bomberman R 2 that caused the game to not boot due to an error in the Friend service',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Fixed an issue in Animal Well that caused the game to not boot due to the audio core revision number being too low',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Fixed an issue in Princess Peach: Showtime! that caused the game to run into a black screen',
-                            secondaryText: 'Please be aware this fix is not complete and Princess Peach: Showtime! will still drop to 0fps occasionally'
-                        },
-                        {
-                            primaryText: 'Fixed an issue in Paper Mario: The Thousand Year Door that caused the sewers to be black when using an AMD graphics card',
-                            secondaryText: 'Thank you to Ryujinx for the pointer towards LogicOp'
                         }
                     ]
                 }
