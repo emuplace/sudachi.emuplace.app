@@ -12,8 +12,8 @@ export default function App() {
         {
             text: 'v1.0.10',
             sha: 'f2e32a9',
-            isLatest: false,
-            isUpcoming: true,
+            isLatest: true,
+            isUpcoming: false,
             details: [
                 {
                     system: "Android",
@@ -74,7 +74,7 @@ export default function App() {
         {
             text: 'v1.0.9',
             sha: 'e56a8a0',
-            isLatest: true,
+            isLatest: false,
             isUpcoming: false,
             details: [
                 {
