@@ -6,7 +6,6 @@ import {
     VisuallyHidden
 } from "@mantine/core";
 import { theme } from "./theme";
-import classes from './App.module.css';
 
 export default function App() {
     const changes = [
@@ -290,19 +289,18 @@ export default function App() {
 
     return (
         <MantineProvider theme={theme} forceColorScheme={date.getHours() >= 7 && date.getHours() <= 19 ? "light" : "dark"}>
-            <Container>
-                <Flex align={'center'} justify={'center'} h={'100vh'}>
-                    <Stack>
-                        <Anchor href='https://twitter.com/antique_codes' ta={'center'} target='_blank'>
-                            @antique_codes
-                        </Anchor>
-                        <Title order={1} ta={'center'}>
-                            Sudachi, a Nintendo Switch emulator
-                        </Title>
-                        <Text c={'dimmed'} ta={'center'}>
-                            Nintendo Switch emulation without the iffy bits and support for more games
-                        </Text>
-                        {/*<Flex align={'center'} justify={'center'}>
+            <Container my={'xl'}>
+                <Stack>
+                    <Anchor href='https://twitter.com/antique_codes' ta={'center'} target='_blank'>
+                        @antique_codes
+                    </Anchor>
+                    <Title order={1} ta={'center'}>
+                        Sudachi, a Nintendo Switch emulator
+                    </Title>
+                    <Text c={'dimmed'} ta={'center'}>
+                        Nintendo Switch emulation without the iffy bits and support for more games
+                    </Text>
+                    {/*<Flex align={'center'} justify={'center'}>
                             <Group ta={'center'}>
                                 <Button component="a" href="https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.9/app-mainline-release.apk" color="green" radius={'xl'} variant="filled">Android</Button>
                                 <Menu opened={opened} onChange={setOpened}>
@@ -338,17 +336,16 @@ export default function App() {
                                 <Button color="gray" component="a" href="https://drive.google.com/file/d/149zdnytWES7-2f8SpXuceVBz--xKgp2c/view?usp=sharing" radius={'xl'} variant="filled">Source Code</Button>
                             </Group>
                         </Flex>*/}
-                        <Title order={2}>
-                            Changes
-                        </Title>
-                        <Accordion classNames={classes} radius={'lg'} variant="contained">
-                            {items}
-                        </Accordion>
-                        <Text c={'red'}>
-                            Please backup and delete all folders within the Sudachi directory, this will fix the downloadable content and updates issue
-                        </Text>
-                    </Stack>
-                </Flex>
+                    <Title order={2}>
+                        Changes
+                    </Title>
+                    <Accordion radius={'lg'} variant="contained">
+                        {items}
+                    </Accordion>
+                    <Text c={'red'}>
+                        Please backup and delete all folders within the Sudachi directory, this will fix the downloadable content and updates issue
+                    </Text>
+                </Stack>
             </Container>
         </MantineProvider>
     );
