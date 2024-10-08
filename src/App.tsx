@@ -2,7 +2,8 @@ import "@mantine/core/styles.css";
 import {
     Accordion, Anchor, Badge, Button, Container,
     Flex, Group, List, MantineProvider,
-    Space, Stack, Text, Title
+    Space, Stack, Text, Title,
+    VisuallyHidden
 } from "@mantine/core";
 import { theme } from "./theme";
 import classes from './App.module.css';
@@ -10,9 +11,119 @@ import classes from './App.module.css';
 export default function App() {
     const changes = [
         {
+            text: 'v1.0.11',
+            sha: '99775b8',
+            isLatest: true,
+            isUpcoming: false,
+            details: [
+                {
+                    system: "Android",
+                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.11/app-mainline-release.apk',
+                    last: false,
+                    items: [
+                        {
+                            primaryText: 'Added beginnings of Echoes of Wisdom audio fix',
+                            secondaryText: 'Code is a reimplementation of Ryujinx\'s audio changes'
+                        },
+                        {
+                            primaryText: 'Changed remaining main on-screen button colours',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Fixes an issue where some games won\'t boot from QLaunch',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Removed links to malicious domain',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Removed telemetry',
+                            secondaryText: null
+                        },
+                    ]
+                },
+                {
+                    system: "Linux",
+                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.11/sudachi-linux-v1.0.11.7z',
+                    last: false,
+                    items: [
+                        {
+                            primaryText: 'Added beginnings of Echoes of Wisdom audio fix',
+                            secondaryText: 'Code is a reimplementation of Ryujinx\'s audio changes'
+                        },
+                        {
+                            primaryText: 'Added the ability to install games to the NAND',
+                            secondaryText: 'Remove games from any added directories to stop duplicates'
+                        },
+                        {
+                            primaryText: 'Added partial support for the MyPage (Profile) applet',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Added partial support for the Data Management settings',
+                            secondaryText: 'App sizing is not 1:1 yet and only works with games installed to the NAND, deletion works but requires a restart'
+                        },
+                        {
+                            primaryText: 'Fixes an issue where some games won\'t boot from QLaunch',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Removed links to malicious domain',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Removed telemetry',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Updated to Qt6, used similar CMake command as Windows',
+                            secondaryText: null
+                        }
+                    ]
+                },
+                {
+                    system: "Windows",
+                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.11/sudachi-windows-v1.0.11.7z',
+                    last: true,
+                    items: [
+                        {
+                            primaryText: 'Added beginnings of Echoes of Wisdom audio fix',
+                            secondaryText: 'Code is a reimplementation of Ryujinx\'s audio changes'
+                        },
+                        {
+                            primaryText: 'Added the ability to install games to the NAND',
+                            secondaryText: 'Remove games from any added directories to stop duplicates'
+                        },
+                        {
+                            primaryText: 'Added partial support for the MyPage (Profile) applet',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Added partial support for the Data Management settings',
+                            secondaryText: 'App sizing is not 1:1 yet and only works with games installed to the NAND, deletion works but requires a restart'
+                        },
+                        {
+                            primaryText: 'Fixes an issue where some games won\'t boot from QLaunch',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Removed links to malicious domain',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Removed telemetry',
+                            secondaryText: null
+                        }
+                    ]
+                }
+            ],
+            url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.11/latest.zip'
+        },
+        {
             text: 'v1.0.10',
             sha: 'f2e32a9',
-            isLatest: true,
+            isLatest: false,
             isUpcoming: false,
             details: [
                 {
@@ -94,37 +205,6 @@ export default function App() {
                 }
             ],
             url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.9/latest.zip'
-        },
-        {
-            text: 'v1.0.8',
-            sha: '450b52f',
-            isLatest: false,
-            isUpcoming: false,
-            details: [
-                {
-                    system: "Android",
-                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.8/app-mainline-release.apk',
-                    last: false,
-                    items: [
-                        {
-                            primaryText: 'Improved memory accuracy and sizing',
-                            secondaryText: null
-                        }
-                    ]
-                },
-                {
-                    system: "Windows",
-                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.8/sudachi-windows-v1.0.8.7z',
-                    last: true,
-                    items: [
-                        {
-                            primaryText: 'Improved memory accuracy and sizing',
-                            secondaryText: null
-                        }
-                    ]
-                }
-            ],
-            url: ''
         }
     ];
 
@@ -141,6 +221,28 @@ export default function App() {
                 </>
             ));
 
+            const button = function () {
+                if (!detail.last) {
+                    return (
+                        <VisuallyHidden>
+                            <Flex justify={'flex-end'}>
+                                <Button color="gray" component="a" disabled={item.url == '' || item.url == null} href={item.url} radius={'md'} size="sm">
+                                    Source Code
+                                </Button>
+                            </Flex>
+                        </VisuallyHidden>
+                    );
+                } else {
+                    return (
+                        <Flex justify={'flex-end'}>
+                            <Button color="gray" component="a" disabled={item.url == '' || item.url == null} href={item.url} radius={'md'} size="sm">
+                                Source Code
+                            </Button>
+                        </Flex>
+                    );
+                }
+            }
+
             return (
                 <>
                     <Title order={3}>
@@ -150,14 +252,11 @@ export default function App() {
                         {detailItems}
                     </List>
                     <Space h={'md'} />
-                    <Group>
-                        <Button component="a" disabled={detail.download == '' || detail.download == null} href={detail.download} radius={'md'} size="sm">
-                            Download
-                        </Button>
-                        <Button color="gray" component="a" disabled={item.url == '' || item.url == null} href={item.url} radius={'md'} size="sm">
-                            Source Code
-                        </Button>
-                    </Group>
+                    <Button component="a" disabled={detail.download == '' || detail.download == null} href={detail.download} radius={'md'} size="sm">
+                        Download
+                    </Button>
+                    <Space h={item.url == '' || item.url == null ? 0 : 'md'} />
+                    {button()}
                     <Space h={detail.last ? 0 : 'md'} />
                 </>
             );
