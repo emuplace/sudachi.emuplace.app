@@ -300,6 +300,9 @@ export default function App() {
                     <Text c={'dimmed'} ta={'center'}>
                         Nintendo Switch emulation without the iffy bits and support for more games
                     </Text>
+                    <Text c={'orange'} ta={'center'}>
+                        Installing games to the NAND is currently broken, please do not use this method
+                    </Text>
                     {/*<Flex align={'center'} justify={'center'}>
                             <Group ta={'center'}>
                                 <Button component="a" href="https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.9/app-mainline-release.apk" color="green" radius={'xl'} variant="filled">Android</Button>
