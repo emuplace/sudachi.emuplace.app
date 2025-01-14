@@ -16,6 +16,21 @@ export default function App() {
             isUpcoming: false,
             details: [
                 {
+                    system: "Linux",
+                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.12/sudachi-linux-v1.0.12.7z',
+                    last: false,
+                    items: [
+                        {
+                            primaryText: 'Added support for Donkey Kong Country™ Returns HD',
+                            secondaryText: 'Stubbed hid::SetGestureOutputRanges'
+                        },
+                        {
+                            primaryText: 'Removed broken 19.0.0+ audio changes',
+                            secondaryText: null
+                        }
+                    ]
+                },
+                {
                     system: "Windows",
                     download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.12/sudachi-windows-v1.0.12.7z',
                     last: true,
