@@ -10,9 +10,33 @@ import { theme } from "./theme";
 export default function App() {
     const changes = [
         {
+            text: 'v1.0.12',
+            sha: '0622bd8',
+            isLatest: true,
+            isUpcoming: false,
+            details: [
+                {
+                    system: "Windows",
+                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.12/sudachi-windows-v1.0.12.7z',
+                    last: true,
+                    items: [
+                        {
+                            primaryText: 'Added support for Donkey Kong Country™ Returns HD',
+                            secondaryText: 'Stubbed hid::SetGestureOutputRanges'
+                        },
+                        {
+                            primaryText: 'Removed broken 19.0.0+ audio changes',
+                            secondaryText: null
+                        }
+                    ]
+                }
+            ],
+            url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.12/latest.zip'
+        },
+        {
             text: 'v1.0.11',
             sha: '99775b8',
-            isLatest: true,
+            isLatest: false,
             isUpcoming: false,
             details: [
                 {
