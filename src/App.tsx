@@ -10,9 +10,52 @@ import { theme } from "./theme";
 export default function App() {
     const changes = [
         {
+            text: 'v1.0.13',
+            sha: 'c5aff15',
+            isLatest: true,
+            isUpcoming: false,
+            details: [
+                {
+                    system: "Android",
+                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/app-mainline-release.apk',
+                    last: false,
+                    items: [
+                        {
+                            primaryText: 'Changed mm:u to be more accurate to documentation',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Removed ability to install games to the NAND',
+                            secondaryText: null
+                        }
+                    ]
+                },
+                {
+                    system: "Windows",
+                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/sudachi-windows-v1.0.13.7z',
+                    last: true,
+                    items: [
+                        {
+                            primaryText: 'Added support for booting to QLaunch via -qlaunch',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Changed mm:u to be more accurate to documentation',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Removed ability to install games to the NAND',
+                            secondaryText: null
+                        }
+                    ]
+                }
+            ],
+            url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/latest.zip'
+        },
+        {
             text: 'v1.0.12',
             sha: '0622bd8',
-            isLatest: true,
+            isLatest: false,
             isUpcoming: false,
             details: [
                 {
@@ -47,202 +90,6 @@ export default function App() {
                 }
             ],
             url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.12/latest.zip'
-        },
-        {
-            text: 'v1.0.11',
-            sha: '99775b8',
-            isLatest: false,
-            isUpcoming: false,
-            details: [
-                {
-                    system: "Android",
-                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.11/app-mainline-release.apk',
-                    last: false,
-                    items: [
-                        {
-                            primaryText: 'Added beginnings of Echoes of Wisdom audio fix',
-                            secondaryText: 'Code is a reimplementation of Ryujinx\'s audio changes'
-                        },
-                        {
-                            primaryText: 'Changed remaining main on-screen button colours',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Fixes an issue where some games won\'t boot from QLaunch',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Removed links to malicious domain',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Removed telemetry',
-                            secondaryText: null
-                        },
-                    ]
-                },
-                {
-                    system: "Linux",
-                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.11/sudachi-linux-v1.0.11.7z',
-                    last: false,
-                    items: [
-                        {
-                            primaryText: 'Added beginnings of Echoes of Wisdom audio fix',
-                            secondaryText: 'Code is a reimplementation of Ryujinx\'s audio changes'
-                        },
-                        {
-                            primaryText: 'Added the ability to install games to the NAND',
-                            secondaryText: 'Remove games from any added directories to stop duplicates'
-                        },
-                        {
-                            primaryText: 'Added partial support for the MyPage (Profile) applet',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Added partial support for the Data Management settings',
-                            secondaryText: 'App sizing is not 1:1 yet and only works with games installed to the NAND, deletion works but requires a restart'
-                        },
-                        {
-                            primaryText: 'Fixes an issue where some games won\'t boot from QLaunch',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Removed links to malicious domain',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Removed telemetry',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Updated to Qt6, used similar CMake command as Windows',
-                            secondaryText: null
-                        }
-                    ]
-                },
-                {
-                    system: "Windows",
-                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.11/sudachi-windows-v1.0.11.7z',
-                    last: true,
-                    items: [
-                        {
-                            primaryText: 'Added beginnings of Echoes of Wisdom audio fix',
-                            secondaryText: 'Code is a reimplementation of Ryujinx\'s audio changes'
-                        },
-                        {
-                            primaryText: 'Added the ability to install games to the NAND',
-                            secondaryText: 'Remove games from any added directories to stop duplicates'
-                        },
-                        {
-                            primaryText: 'Added partial support for the MyPage (Profile) applet',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Added partial support for the Data Management settings',
-                            secondaryText: 'App sizing is not 1:1 yet and only works with games installed to the NAND, deletion works but requires a restart'
-                        },
-                        {
-                            primaryText: 'Fixes an issue where some games won\'t boot from QLaunch',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Removed links to malicious domain',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Removed telemetry',
-                            secondaryText: null
-                        }
-                    ]
-                }
-            ],
-            url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.11/latest.zip'
-        },
-        {
-            text: 'v1.0.10',
-            sha: 'f2e32a9',
-            isLatest: false,
-            isUpcoming: false,
-            details: [
-                {
-                    system: "Android",
-                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.10/app-mainline-release.apk',
-                    last: false,
-                    items: [
-                        {
-                            primaryText: 'Added some support for QLaunch (Home Menu) and added QLaunch option to Applet launcher submenu',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Improved accuracy of several IPC interface services',
-                            secondaryText: null
-                        }
-                    ]
-                },
-                {
-                    system: "Linux",
-                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.10/sudachi-linux-v1.0.10.7z',
-                    last: false,
-                    items: [
-                        {
-                            primaryText: 'Added some support for QLaunch (Home Menu) and added QLaunch option to Tools submenu',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Improved accuracy of several IPC interface services',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Improved game library loading by using native C++ directory recursion',
-                            secondaryText: null
-                        }
-                    ]
-                },
-                {
-                    system: "Windows",
-                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.10/sudachi-windows-v1.0.10.7z',
-                    last: true,
-                    items: [
-                        {
-                            primaryText: 'Added some support for QLaunch (Home Menu) and added QLaunch option to Tools submenu',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Improved accuracy of several IPC interface services',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Improved game library loading by using native C++ directory recursion',
-                            secondaryText: null
-                        }
-                    ]
-                }
-            ],
-            url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.10/latest.zip'
-        },
-        {
-            text: 'v1.0.9',
-            sha: 'e56a8a0',
-            isLatest: false,
-            isUpcoming: false,
-            details: [
-                {
-                    system: "Android",
-                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.9/app-mainline-release.apk',
-                    last: true,
-                    items: [
-                        {
-                            primaryText: 'Added an additional page to the setup flow and button to the settings page allowing users to select a title.keys file',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Fixed an issue where the app would crash when installing a DLC or update',
-                            secondaryText: 'Requires both prod.keys and title.keys'
-                        }
-                    ]
-                }
-            ],
-            url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.9/latest.zip'
         }
     ];
 
