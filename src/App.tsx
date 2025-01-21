@@ -10,6 +10,38 @@ import { theme } from "./theme";
 export default function App() {
     const changes = [
         {
+            text: 'v1.0.14',
+            sha: '...',
+            isLatest: false,
+            isUpcoming: true,
+            details: [
+                {
+                    system: "All Platforms",
+                    download: '',
+                    last: true,
+                    items: [
+                        {
+                            primaryText: 'Added support for booting the initial setup screen via -setup (on Linux, macOS, Windows)',
+                            secondaryText: 'Only partial support for now, will be improved in the future'
+                        },
+                        {
+                            primaryText: 'Added several missing functions to allow the initial setup screen to be launched',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Fixed an issue with mm:u where Get and GetOld would not return after pushing a found session\'s minimum value',
+                            secondaryText: null
+                        },
+                        {
+                            primaryText: 'Started rewrite of caps, caps:a and caps:su to improve accuracy',
+                            secondaryText: null
+                        }
+                    ]
+                }
+            ],
+            url: ''
+        },
+        {
             text: 'v1.0.13',
             sha: 'c5aff15',
             isLatest: true,
@@ -51,45 +83,6 @@ export default function App() {
                 }
             ],
             url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/latest.zip'
-        },
-        {
-            text: 'v1.0.12',
-            sha: '0622bd8',
-            isLatest: false,
-            isUpcoming: false,
-            details: [
-                {
-                    system: "Linux",
-                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.12/sudachi-linux-v1.0.12.7z',
-                    last: false,
-                    items: [
-                        {
-                            primaryText: 'Added support for Donkey Kong Country™ Returns HD',
-                            secondaryText: 'Stubbed hid::SetGestureOutputRanges'
-                        },
-                        {
-                            primaryText: 'Removed broken 19.0.0+ audio changes',
-                            secondaryText: null
-                        }
-                    ]
-                },
-                {
-                    system: "Windows",
-                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.12/sudachi-windows-v1.0.12.7z',
-                    last: true,
-                    items: [
-                        {
-                            primaryText: 'Added support for Donkey Kong Country™ Returns HD',
-                            secondaryText: 'Stubbed hid::SetGestureOutputRanges'
-                        },
-                        {
-                            primaryText: 'Removed broken 19.0.0+ audio changes',
-                            secondaryText: null
-                        }
-                    ]
-                }
-            ],
-            url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.12/latest.zip'
         }
     ];
 
@@ -186,9 +179,6 @@ export default function App() {
                     <Text c={'dimmed'} ta={'center'}>
                         Nintendo Switch emulation without the iffy bits and support for more games
                     </Text>
-                    <Text c={'orange'} ta={'center'}>
-                        Installing games to the NAND is currently broken, please do not use this method
-                    </Text>
                     {/*<Flex align={'center'} justify={'center'}>
                             <Group ta={'center'}>
                                 <Button component="a" href="https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.9/app-mainline-release.apk" color="green" radius={'xl'} variant="filled">Android</Button>
@@ -231,9 +221,6 @@ export default function App() {
                     <Accordion radius={'lg'} variant="contained">
                         {items}
                     </Accordion>
-                    <Text c={'red'}>
-                        Please backup and delete all folders within the Sudachi directory, this will fix the downloadable content and updates issue
-                    </Text>
                 </Stack>
             </Container>
         </MantineProvider>
