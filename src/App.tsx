@@ -1,152 +1,124 @@
 import "@mantine/core/styles.css";
 import {
     Accordion, Anchor, Badge, Button, Container,
-    Flex, Group, List, MantineProvider,
-    Space, Stack, Text, Title,
-    VisuallyHidden
+    Flex,
+    Group,
+    List,
+    MantineProvider,
+    Space,
+    Stack, Text, Title
 } from "@mantine/core";
 import { theme } from "./theme";
 
 export default function App() {
     const changes = [
         {
-            text: 'v1.0.14',
+            version: 'v1.0.14',
             sha: '...',
             isLatest: false,
             isUpcoming: true,
             details: [
                 {
-                    system: "All Platforms",
-                    download: '',
-                    last: true,
-                    items: [
-                        {
-                            primaryText: 'Added support for booting the initial setup screen via -setup (on Linux, macOS, Windows)',
-                            secondaryText: 'Only partial support for now, will be improved in the future'
-                        },
-                        {
-                            primaryText: 'Added several missing functions to allow the initial setup screen to be launched',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Fixed an issue with mm:u where Get and GetOld would not return after pushing a found session\'s minimum value',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Started rewrite of caps, caps:a and caps:su to improve accuracy',
-                            secondaryText: null
-                        }
+                    title: 'Added support for booting the initial setup screen via -setup',
+                    subtitles: [
+                        'Only available on Linux, macOS and Windows via Terminal or Tools > Open Initial Setup',
+                        'Only partial support for now, will be improved in the future'
                     ]
+                },
+                {
+                    title: 'Added several missing functions to allow the initial setup screen to be launched',
+                    subtitles: []
+                },
+                {
+                    title: 'Fixed an issue with mm:u where Get and GetOld would not return after pushing a found session\'s minimum value',
+                    subtitles: []
+                },
+                {
+                    title: 'Started rewrite of caps, caps:a and caps:su to improve accuracy',
+                    subtitles: []
                 }
             ],
-            url: ''
+            downloads: [
+                {
+                    color: 'green',
+                    platform: 'Android',
+                    url: ''
+                },
+                {
+                    color: 'orange',
+                    platform: 'Linux',
+                    url: ''
+                },
+                {
+                    color: 'violet',
+                    platform: 'macOS',
+                    url: ''
+                },
+                {
+                    color: 'blue',
+                    platform: 'Windows',
+                    url: ''
+                },
+                {
+                    color: 'gray',
+                    platform: 'Source Code',
+                    url: ''
+                }
+            ]
         },
         {
-            text: 'v1.0.13',
+            version: 'v1.0.13',
             sha: 'c5aff15',
             isLatest: true,
             isUpcoming: false,
             details: [
                 {
-                    system: "Android",
-                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/app-mainline-release.apk',
-                    last: false,
-                    items: [
-                        {
-                            primaryText: 'Changed mm:u to be more accurate to documentation',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Removed ability to install games to the NAND',
-                            secondaryText: null
-                        }
-                    ]
+                    title: 'Changed mm:u to be more accurate to documentation',
+                    subtitles: []
                 },
                 {
-                    system: "Windows",
-                    download: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/sudachi-windows-v1.0.13.7z',
-                    last: true,
-                    items: [
-                        {
-                            primaryText: 'Added support for booting to QLaunch via -qlaunch',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Changed mm:u to be more accurate to documentation',
-                            secondaryText: null
-                        },
-                        {
-                            primaryText: 'Removed ability to install games to the NAND',
-                            secondaryText: null
-                        }
-                    ]
+                    title: 'Removed ability to install games to the NAND',
+                    subtitles: []
                 }
             ],
-            url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/latest.zip'
+            downloads: [
+                {
+                    color: 'green',
+                    platform: 'Android',
+                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/app-mainline-release.apk'
+                },
+                {
+                    color: 'orange',
+                    platform: 'Linux',
+                    url: ''
+                },
+                {
+                    color: 'violet',
+                    platform: 'macOS',
+                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/sudachi-macos-v1.0.13.7z'
+                },
+                {
+                    color: 'blue',
+                    platform: 'Windows',
+                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/sudachi-windows-v1.0.13.7z'
+                },
+                {
+                    color: 'gray',
+                    platform: 'Source Code',
+                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/latest.zip'
+                }
+            ]
         }
-    ];
+    ]
 
     const items = changes.map((item) => {
-        const listItems = item.details.map((detail) => {
-            const detailItems = detail.items.map((item) => (
-                <>
-                    <List.Item>
-                        <Text>{item.primaryText}</Text>
-                        <Text c={'dimmed'} size="sm" hidden={item.secondaryText == '' || item.secondaryText == null}>
-                            {item.secondaryText}
-                        </Text>
-                    </List.Item>
-                </>
-            ));
-
-            const button = function () {
-                if (!detail.last) {
-                    return (
-                        <VisuallyHidden>
-                            <Flex justify={'flex-end'}>
-                                <Button color="gray" component="a" disabled={item.url == '' || item.url == null} href={item.url} radius={'md'} size="sm">
-                                    Source Code
-                                </Button>
-                            </Flex>
-                        </VisuallyHidden>
-                    );
-                } else {
-                    return (
-                        <Flex justify={'flex-end'}>
-                            <Button color="gray" component="a" disabled={item.url == '' || item.url == null} href={item.url} radius={'md'} size="sm">
-                                Source Code
-                            </Button>
-                        </Flex>
-                    );
-                }
-            }
-
-            return (
-                <>
-                    <Title order={3}>
-                        {detail.system}
-                    </Title>
-                    <List>
-                        {detailItems}
-                    </List>
-                    <Space h={'md'} />
-                    <Button component="a" disabled={detail.download == '' || detail.download == null} href={detail.download} radius={'md'} size="sm">
-                        Download
-                    </Button>
-                    <Space h={item.url == '' || item.url == null ? 0 : 'md'} />
-                    {button()}
-                    <Space h={detail.last ? 0 : 'md'} />
-                </>
-            );
-        });
-
         return (
-            <Accordion.Item key={item.text} value={item.text}>
+            <Accordion.Item key={item.version} value={item.version}>
                 <Accordion.Control>
                     <Group justify='space-between' pr={'md'}>
                         <Group gap={'sm'}>
                             <Text>
-                                {item.text}
+                                {item.version}
                             </Text>
                             <Text c={'dimmed'}>
                                 {`(${item.sha})`}
@@ -158,13 +130,39 @@ export default function App() {
                     </Group>
                 </Accordion.Control>
                 <Accordion.Panel>
-                    {...listItems}
+                    <List>
+                        {item.details.map((detail) => (
+                            <List.Item>
+                                <Text>
+                                    {detail.title}
+                                </Text>
+                                <List>
+                                    {detail.subtitles.map((subtitle) => (
+                                        <List.Item>
+                                            <Text c={'dimmed'} size="sm">
+                                                {subtitle}
+                                            </Text>
+                                        </List.Item>
+                                    ))}
+                                </List>
+                            </List.Item>
+                        ))}
+                    </List>
+                    <Space h={'md'} />
+                    <Flex gap={'md'} wrap={'wrap'} justify="flex-start"
+                        align="flex-start">
+                        {item.downloads.map((download) => (
+                            <Button color={download.color} radius={'md'} component="a" disabled={download.url == '' || download.url == null} href={download.url}>
+                                {download.platform}
+                            </Button>
+                        ))}
+                    </Flex>
                 </Accordion.Panel>
             </Accordion.Item>
-        );
-    });
+        )
+    })
 
-    const date = new Date();
+    const date = new Date()
 
     return (
         <MantineProvider theme={theme} forceColorScheme={date.getHours() >= 7 && date.getHours() <= 19 ? "light" : "dark"}>
@@ -179,42 +177,6 @@ export default function App() {
                     <Text c={'dimmed'} ta={'center'}>
                         Nintendo Switch emulation without the iffy bits and support for more games
                     </Text>
-                    {/*<Flex align={'center'} justify={'center'}>
-                            <Group ta={'center'}>
-                                <Button component="a" href="https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.9/app-mainline-release.apk" color="green" radius={'xl'} variant="filled">Android</Button>
-                                <Menu opened={opened} onChange={setOpened}>
-                                    <Menu.Target>
-                                        <Button radius={'xl'} variant="filled" disabled>Apple</Button>
-                                    </Menu.Target>
-
-                                    <Menu.Dropdown>
-                                        <Menu.Label>iOS, iPadOS</Menu.Label>
-                                        <Menu.Item leftSection={<IconDeviceTablet style={{ width: rem(14), height: rem(14) }} />}>
-                                            iPad
-                                        </Menu.Item>
-                                        <Menu.Item leftSection={<IconDeviceMobile style={{ width: rem(14), height: rem(14) }} />}>
-                                            iPhone
-                                        </Menu.Item>
-                                        <Menu.Divider />
-                                        <Menu.Label>macOS</Menu.Label>
-                                        <Menu.Item leftSection={<IconDeviceLaptop style={{ width: rem(14), height: rem(14) }} />} disabled>
-                                            Apple Silicon
-                                        </Menu.Item>
-                                        <Menu.Item leftSection={<IconDeviceLaptop style={{ width: rem(14), height: rem(14) }} />} disabled>
-                                            Intel
-                                        </Menu.Item>
-                                        <Menu.Divider />
-                                        <Menu.Label>visionOS</Menu.Label>
-                                        <Menu.Item leftSection={<IconCardboards style={{ width: rem(14), height: rem(14) }} />} disabled>
-                                            Apple Vision Pro
-                                        </Menu.Item>
-                                    </Menu.Dropdown>
-                                </Menu>
-                                <Button color="orange" radius={'xl'} variant="filled" disabled>Linux</Button>
-                                <Button color="blue" component="a" href="https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.8/sudachi-windows-v1.0.8.7z" radius={'xl'} variant="filled">Windows</Button>
-                                <Button color="gray" component="a" href="https://drive.google.com/file/d/149zdnytWES7-2f8SpXuceVBz--xKgp2c/view?usp=sharing" radius={'xl'} variant="filled">Source Code</Button>
-                            </Group>
-                        </Flex>*/}
                     <Title order={2}>
                         Changes
                     </Title>
@@ -224,5 +186,5 @@ export default function App() {
                 </Stack>
             </Container>
         </MantineProvider>
-    );
+    )
 }
