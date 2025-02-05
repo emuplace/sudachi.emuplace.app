@@ -90,7 +90,7 @@ export default function App() {
                 {
                     color: 'orange',
                     platform: 'Linux',
-                    url: ''
+                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/sudachi-linux-v1.0.13.7z'
                 },
                 {
                     color: 'violet',
