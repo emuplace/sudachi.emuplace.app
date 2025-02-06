@@ -14,9 +14,9 @@ export default function App() {
     const changes = [
         {
             version: 'v1.0.14',
-            sha: '...',
-            isLatest: false,
-            isUpcoming: true,
+            sha: '6178075',
+            isLatest: true,
+            isUpcoming: false,
             details: [
                 {
                     title: 'Added support for booting the initial setup screen via -setup',
@@ -27,7 +27,9 @@ export default function App() {
                 },
                 {
                     title: 'Added several missing functions to allow the initial setup screen to be launched',
-                    subtitles: []
+                    subtitles: [
+                        'Fixes an issue where some newer games would not boot'
+                    ]
                 },
                 {
                     title: 'Fixed an issue with mm:u where Get and GetOld would not return after pushing a found session\'s minimum value',
@@ -42,12 +44,12 @@ export default function App() {
                 {
                     color: 'green',
                     platform: 'Android',
-                    url: ''
+                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.14/app-mainline-release.apk'
                 },
                 {
                     color: 'orange',
                     platform: 'Linux',
-                    url: ''
+                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.14/sudachi-linux-v1.0.14.7z'
                 },
                 {
                     color: 'violet',
@@ -57,19 +59,19 @@ export default function App() {
                 {
                     color: 'blue',
                     platform: 'Windows',
-                    url: ''
+                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.14/sudachi-windows-v1.0.14.7z'
                 },
                 {
                     color: 'gray',
                     platform: 'Source Code',
-                    url: ''
+                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.14/latest.zip'
                 }
             ]
         },
         {
             version: 'v1.0.13',
             sha: 'c5aff15',
-            isLatest: true,
+            isLatest: false,
             isUpcoming: false,
             details: [
                 {
