@@ -13,9 +13,72 @@ import { theme } from "./theme";
 export default function App() {
     const changes = [
         {
+            version: 'v1.0.15',
+            sha: 'c7431bd',
+            isLatest: true,
+            isUpcoming: false,
+            details: [
+                {
+                    title: 'Added support for XCX:DE by stubbing ssl:s',
+                    subtitles: [
+                        'Currently the menu and a small section of the game has been tested'
+                    ]
+                },
+                {
+                    title: 'Changed how MoltenVK is obtained for macOS to get newer versions',
+                    subtitles: [
+                        'Artifacts are now used which can now be updated more frequently'
+                    ]
+                },
+                {
+                    title: 'Changed from SDL2 to SDL3 bringing over its improvements',
+                    subtitles: []
+                },
+                {
+                    title: 'Fixed issues related to caps by reverting the rewrite temporarily',
+                    subtitles: []
+                },
+                {
+                    title: 'Fixed several compilation errors on macOS',
+                    subtitles: []
+                },
+                {
+                    title: 'Updated vcpkg to the latest version',
+                    subtitles: []
+                },
+            ],
+            downloads: [
+                {
+                    color: 'green',
+                    platform: 'Android',
+                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.15/app-mainline-release.apk'
+                },
+                {
+                    color: 'orange',
+                    platform: 'Linux',
+                    url: ''
+                },
+                {
+                    color: 'violet',
+                    platform: 'macOS',
+                    url: ''
+                },
+                {
+                    color: 'blue',
+                    platform: 'Windows',
+                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.15/sudachi-windows-v1.0.15.7z'
+                },
+                {
+                    color: 'gray',
+                    platform: 'Source Code',
+                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.15/latest.zip'
+                }
+            ]
+        },
+        {
             version: 'v1.0.14',
             sha: '6178075',
-            isLatest: true,
+            isLatest: false,
             isUpcoming: false,
             details: [
                 {
@@ -65,49 +128,6 @@ export default function App() {
                     color: 'gray',
                     platform: 'Source Code',
                     url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.14/latest.zip'
-                }
-            ]
-        },
-        {
-            version: 'v1.0.13',
-            sha: 'c5aff15',
-            isLatest: false,
-            isUpcoming: false,
-            details: [
-                {
-                    title: 'Changed mm:u to be more accurate to documentation',
-                    subtitles: []
-                },
-                {
-                    title: 'Removed ability to install games to the NAND',
-                    subtitles: []
-                }
-            ],
-            downloads: [
-                {
-                    color: 'green',
-                    platform: 'Android',
-                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/app-mainline-release.apk'
-                },
-                {
-                    color: 'orange',
-                    platform: 'Linux',
-                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/sudachi-linux-v1.0.13.7z'
-                },
-                {
-                    color: 'violet',
-                    platform: 'macOS',
-                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/sudachi-macos-v1.0.13.7z'
-                },
-                {
-                    color: 'blue',
-                    platform: 'Windows',
-                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/sudachi-windows-v1.0.13.7z'
-                },
-                {
-                    color: 'gray',
-                    platform: 'Source Code',
-                    url: 'https://github.com/emuplace/sudachi.emuplace.app/releases/download/v1.0.13/latest.zip'
                 }
             ]
         }
