@@ -1,7 +1,7 @@
 import "@mantine/core/styles.css";
 import {
-    Accordion, Anchor, Badge, Button, Container,
-    Flex,
+    Accordion,
+    Anchor, Badge, Center, Flex,
     Group,
     List,
     MantineProvider,
@@ -11,6 +11,139 @@ import {
 import { theme } from "./theme";
 
 export default function App() {
+    const changes = [
+        {
+            text: 'Latest Changes',
+            secondaryText: 'Updated 20th June 2025',
+            details: [
+                {
+                    header: 'Added',
+                    items: [
+                        {
+                            title: 'Added missing master_key_* identifiers from 0x0B to 0x13 to include FW 18.0.0+ support',
+                            subtitle: ''
+                        },
+                        {
+                            title: 'Added AliasRegionExtraSize to Kernel, ProgramMetadata and SVC to include FW 18.0.0+ support',
+                            subtitle: ''
+                        }
+                    ]
+                },
+                {
+                    header: 'Changed',
+                    items: [
+                        {
+                            title: 'Rewrote the AppletAE, MM:U and NVMEMP services to improve accuracy',
+                            subtitle: ''
+                        },
+                        {
+                            title: 'Rewrote the RawNACP structure to improve accuracy and include FW 20.0.0+ support',
+                            subtitle: ''
+                        }
+                    ]
+                },
+                {
+                    header: 'Deprecated',
+                    items: []
+                },
+                {
+                    header: 'Fixed',
+                    items: [
+                        {
+                            title: 'Fixed compilation errors and issues with Mbed-TLS',
+                            subtitle: ''
+                        }
+                    ]
+                },
+                {
+                    header: 'Removed',
+                    items: []
+                },
+                {
+                    header: 'Security',
+                    items: []
+                }
+            ]
+        }
+    ]
+
+    const items = changes.map((item) => {
+        return (
+            <Accordion.Item key={item.text} value={item.text}>
+                <Accordion.Control>
+                    <Group justify={'space-between'} mr={'sm'}>
+                        <Text>
+                            {item.text}
+                        </Text>
+                        <Text c={'dimmed'}>
+                            {item.secondaryText}
+                        </Text>
+                    </Group>
+                </Accordion.Control>
+                <Accordion.Panel mr={'md'}>
+                    {
+                        item.details.map((detail, index) => (
+                            <>
+                                <Title order={2}>
+                                    {detail.header}
+                                </Title>
+                                <List>
+                                    {
+                                        detail.items.length == 0 ? (
+                                            <Text c={'dimmed'}>Unchanged</Text>
+                                        ) : (
+                                            detail.items.map((item) => (
+                                                <List.Item>
+                                                    <Text c={'dimmed'}>
+                                                        {item.title}
+                                                    </Text>
+                                                </List.Item>
+                                            ))
+                                        )
+                                    }
+                                </List>
+                                <Space h={index == item.details.length - 1 ? 0 : 'md'} />
+                            </>
+                        ))
+                    }
+                </Accordion.Panel>
+            </Accordion.Item>
+        )
+    })
+
+    const date = new Date()
+
+    return (
+        <MantineProvider theme={theme} forceColorScheme={date.getHours() >= 7 && date.getHours() <= 19 ? 'light' : 'dark'}>
+            <Flex align={'center'} h={'100vh'} justify={'center'} mx={'md'}>
+                <Stack>
+                    <Anchor href='https://twitter.com/getsudachiemu' target={'_blank'}>
+                        <Text c={theme.primaryColor} ta={'center'}>
+                            @getsudachiemu
+                        </Text>
+                    </Anchor>
+                    <Title order={1} ta={'center'}>
+                        Sudachi, a Nintendo Switch emulator
+                    </Title>
+                    <Center>
+                        <Badge variant={'dot'}>
+                            #a-new-beginning
+                        </Badge>
+                    </Center>
+                    <Text c={'dimmed'} ta={'center'}>
+                        Nintendo Switch emulation focusing on accuracy, performance and support
+                    </Text>
+                    <Space h={'md'} />
+                    <Accordion radius={'lg'} variant={'contained'}>
+                        {items}
+                    </Accordion>
+                </Stack>
+            </Flex>
+        </MantineProvider>
+    )
+}
+
+/*export default function App() {
     const changes = [
         {
             version: 'v1.0.15',
@@ -209,4 +342,4 @@ export default function App() {
             </Container>
         </MantineProvider>
     )
-}
+}*/
