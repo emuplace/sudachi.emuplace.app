@@ -14,6 +14,49 @@ export default function App() {
     const changes = [
         {
             text: 'Latest Changes',
+            secondaryText: 'Updated 2nd July 2025',
+            details: [
+                {
+                    header: 'Added',
+                    items: [
+                        {
+                            title: 'Added missing functions to IAudioController to include FW 19.0.0+ support',
+                            subtitle: ''
+                        },
+                        {
+                            title: 'Added missing functions to IParentalControlService to include FW 18.0.0+ support',
+                            subtitle: ''
+                        },
+                        {
+                            title: 'Added missing functions to IProfile and IProfileEditor to include FW 15.0.0 and 18.0.0+ support',
+                            subtitle: ''
+                        }
+                    ]
+                },
+                {
+                    header: 'Changed',
+                    items: []
+                },
+                {
+                    header: 'Deprecated',
+                    items: []
+                },
+                {
+                    header: 'Fixed',
+                    items: []
+                },
+                {
+                    header: 'Removed',
+                    items: []
+                },
+                {
+                    header: 'Security',
+                    items: []
+                }
+            ]
+        },
+        {
+            text: 'Older Changes',
             secondaryText: 'Updated 20th June 2025',
             details: [
                 {
