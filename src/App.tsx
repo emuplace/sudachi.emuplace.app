@@ -207,6 +207,19 @@ export default function App() {
                     <Accordion radius={'lg'} variant={'contained'}>
                         {items}
                     </Accordion>
+                    <Space h={'md'} />
+                    <Center>
+                        <Stack>
+                            <Text c={'dimmed'} ta={'center'}>
+                                Sudachi is no longer in-development and won't be for some time due to my required commitment to my paid project, Folium<br />For a fork that also provides real, significant changes, check out Eden below
+                            </Text>
+                            <Flex justify={'center'}>
+                                <Button color={'violet'} component={'a'} href={'https://eden-emu.dev'} radius={'xl'} target={'_blank'} variant={'light'}>
+                                    Check out Eden
+                                </Button>
+                            </Flex>
+                        </Stack>
+                    </Center>
                 </Stack>
                 */}
                 </Flex>
