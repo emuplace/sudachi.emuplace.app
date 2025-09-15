@@ -1,16 +1,17 @@
 import "@mantine/core/styles.css";
 import {
-    Accordion,
-    Anchor, Badge, Center, Flex,
-    Group,
-    List,
+    Container,
+    Flex,
     MantineProvider,
-    Space,
-    Stack, Text, Title
+    Title,
+    Text,
+    Stack,
+    Anchor
 } from "@mantine/core";
 import { theme } from "./theme";
 
 export default function App() {
+    /*
     const changes = [
         {
             text: 'Latest Changes',
@@ -153,12 +154,38 @@ export default function App() {
             </Accordion.Item>
         )
     })
+        */
 
     const date = new Date()
 
     return (
         <MantineProvider theme={theme} forceColorScheme={date.getHours() >= 7 && date.getHours() <= 19 ? 'light' : 'dark'}>
-            <Flex align={'center'} h={'100vh'} justify={'center'} mx={'md'}>
+            <Container>
+                <Flex align={'center'} mih={'100vh'} justify={'center'}>
+                    <Stack>
+                        <Anchor href='https://twitter.com/getsudachiemu' target={'_blank'}>
+                            <Text c={theme.primaryColor} ta={'center'}>
+                                @getsudachiemu
+                            </Text>
+                        </Anchor>
+                        <Title order={1} ta={'center'}>
+                            Development Postponed
+                        </Title>
+                        <Flex align={'center'} gap={'xs'} justify={'center'}>
+                            <Text c={'dimmed'}>
+                                Check out
+                            </Text>
+                            <Anchor href='https://folium.emuplace.app' target={'_blank'}>
+                                <Text c={theme.primaryColor} ta={'center'}>
+                                    Folium
+                                </Text>
+                            </Anchor>
+                            <Text c={'dimmed'}>
+                                for iPad and iPhone
+                            </Text>
+                        </Flex>
+                    </Stack>
+                    {/*
                 <Stack>
                     <Anchor href='https://twitter.com/getsudachiemu' target={'_blank'}>
                         <Text c={theme.primaryColor} ta={'center'}>
@@ -181,7 +208,9 @@ export default function App() {
                         {items}
                     </Accordion>
                 </Stack>
-            </Flex>
+                */}
+                </Flex>
+            </Container>
         </MantineProvider>
     )
 }
